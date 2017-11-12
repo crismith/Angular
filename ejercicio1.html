@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form action="">
+	
+	<input type="text" id="numero1">
+
+	<input type="text" id="numero2">
+
+	<input type="button" value="Sumar"
+	onclick="alert( suma(10,50) );">
+
+</form>
+
+<script>
+
+var suma = function(numero1, numero2)
+{
+
+var numero1 = Number(document.getElementById("numero1").value);
+
+var numero2 = Number(document.getElementById("numero2").value);
+
+var resultado = numero1 + numero2;
+
+return resultado;
+}
+
+
+
+
+</script>
+
+</body>
+</html>

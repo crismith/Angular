@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="uft-8">
+	<title>tiempo</title>
+</head>
+<body>
+
+
+	<script>
+
+	(function(){
+
+		var contador = 0 ;
+
+		//timeout
+		var saludo = function(){
+			// es para llamar ala funcion yq eu cuentenormalmente console.log('ola amigo pepe');
+			contador++;
+			console.log(contador)
+			//aqui funciona contando los numeros
+			
+			setTimeout(saludo, 1000);
+			//tmb puede eejecuata cosas como el interval
+
+			
+			//if (contador === 5) { clearInterval(interval); };
+
+		};
+
+		saludo();
+		
+	
+
+		//interval
+			//var interval = setInterval(saludo, 1000);
+	}())
+
+	</script>
+</body>
+</html>

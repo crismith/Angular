@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="uft-8">
+	<title>fechas</title>
+</head>
+<body>
+
+
+	<script>
+
+	(function(){
+
+		var fecha = new Date();
+		document.write(fecha)
+		//para ver la hora del sistema
+
+		console.log(fecha.getHours() -12 );
+		console.log(fecha.getMinutes());
+		console.log(fecha.getSeconds());
+		//este se ve en la consola
+
+		console.log(fecha.getDay());
+		console.log(fecha.getDate());//se ve como un arreglo que pero el domingo es 0
+		console.log(fecha.getMonth());//tmb se ve como un arreglo
+		console.log(fecha.getFullYear());
+
+
+
+	}())
+
+	</script>
+</body>
+</html>

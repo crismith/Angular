@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			color: red;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul id="lista">
+		<li ></li>
+	</ul>
+		
+	<button id="btn" onclick="verMeses()">Ver los meses</button>
+
+	<script>
+
+			var lista = document.getElementById('lista');
+			var meses = ['enero' , 'febrero' , 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'];
+
+			var verMeses = function() {
+				for (var i = 0; i < meses.length; i++) {
+					//lo pongo de esta manera porque i es el  que incrementa y meses va sumando uno cada vez es por eso que muesta un mese cada vez que avanza
+					var contenido = document.createTextNode(meses[i]);
+					
+					var nuevomes = document.createElement('li');
+					nuevomes.appendChild(contenido);
+				};
+			};
+
+	</script>
+	
+</body>
+</html>

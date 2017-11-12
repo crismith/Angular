@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Acceso a los atributos del DOM</title>
+<meta charset="UTF-8">
+<style>
+div {
+	width: 200px;
+	height: 200px;
+	background: #025;
+	display: inline-block;
+	border: 1px solid #555;
+}
+
+.azul{
+	background: #888;
+	border: 1px solid #000;
+}
+.rojo{
+	background: #088;
+	border: 1px solid #180;
+}
+
+</style>
+</head>
+<body>
+
+	<section id="contenedor">
+		<div class=""></div>
+		<div class=""></div>
+	</section>
+
+	<script>
+	var elemento = document.createElement("div");
+	var padre = document.getElementById("contenedor");
+	var referencia = document.getElementsByTagName("div")[0];
+	//para poder cambiar se utiliza este setAttribute
+	elemento.setAttribute("class","rojo");
+	padre.insertBefore(elemento, referencia);
+	
+	// para llamar document.body.appendChild(elemento);
+
+	//para cambiar el nombre de los Id se utiliza elemento. Id y para las clases se utlizaelemento.className
+
+
+	</script>
+
+</body>
+</html>

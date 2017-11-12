@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>dom II</title>
+</head>
+<body>
+	<ol id="lista">
+		<li>zsdfhsdfhkdjhfkxj</li>
+		<li>zsdfhsdfhkdjhfkxj</li>
+	</ol>
+
+<script>
+var elemento = document.createElement("li"),
+	contenido = document.createTextNode(
+	"Hola me llamo Cristian");
+elemento.appendChild(contenido);
+
+//se trabajamejor con este cuando se tiene varias listas
+//var padre = document.getElementById("lista");
+
+//estanos agregando nuestro nuevo elelemnto al final de la lista solo llamando atraves de ID mb sepuede llamar usando  el [parentNode] que es una sintaxis con la cuasl se le llamaria como un arreglo
+var padre = document.getElementsByTagName("li")[0].
+	parentNode,
+	//aqui se esta agregando otra variable seguida en la cual se va ulizilar al ultimo pero el cual se pocicionara primero
+	hijo = document.getElementsByTagName("li")[1];
+
+padre.insertBefore(elemento, hijo);
+//insertBefore sirva para poner el elemento en el primer lugar
+
+
+//document.body.appendChild(elemento)
+</script>
+</body>
+</html>

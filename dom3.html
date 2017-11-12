@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Modificando, Remplazando y Eliminando Nodos del DOM</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">fsdfsdfsdfsd</li>
+		<li>fsdfsdfsdfsd</li>
+	</ol>	
+
+<script>
+
+//var primerElemento = document.getElementById('primero');
+//con innerHTML se puede modifcar todo un contenido de la web
+
+//primerElemento.innerHTML = "HOLA MUNDO <i>bienvenido</i>";
+
+//tmb existe textContent que  se ejecuta directamente al contenido que quieres utilizar
+
+//primerElemento.textContent = "HOLA MUNDO <i>bienvenido</i>";
+
+var elemento = document.createElement("li"),
+contenido = document.createTextNode("nuevo texto");
+
+elemento.appendChild(contenido);
+
+
+//aqui se esta creando y eliminando ala vez
+var padre = document.getElementsByTagName("li")[0].parentNode,
+referencia = document.getElementsByTagName("li")[0];
+//para remover o eliminado
+padre.removeChild(referencia);
+
+//aqui se esta creando y eliminando ala vez todo se hace con replaceChild
+//padre.replaceChild(elemento, referencia);
+
+
+
+</script>
+
+</body>
+</html>

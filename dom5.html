@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Modificando el estilo de los elementos</title>
+	<meta charset="UTF-8">
+	<style>
+	.thumb{
+		width: 200px;
+		transition :300ms all ease;
+	}
+	.grande{
+		width: 400px;
+	}
+	.titulo{
+		border: 1px solid #28f;
+		background: #ccc;
+		padding: 15px;
+	}
+	.titulogrande{
+		font-size: 60px;
+	}
+
+	</style>
+</head>
+<body>
+<h1 id="encabezado">Soy un encabezado *_* </h1>
+
+	<script>
+	var encabezado = document.getElementById("encabezado");
+	encabezado.style.background = "green";
+//con java script se puede aser trabajar las funciones de Csss solo llamando la variable y poniendo style. y el valor que quieres asser
+
+//para cambiar o poner nombre se ase utilizando el nombre de tu variable y poniendo el atributo ejemplo encabezado.className="titulo titulogrande" se puede poner varias en la misma linea de codigo
+	</script>
+
+
+</body>
+</html>

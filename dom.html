@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+
+</head>
+<body>
+	<h1 id="titulo">Una pruebda de DOM</h1>
+	
+	<div id="subtitulo"> </div>
+
+	<p> Hola mundo
+		<b>me llamo cristian</b>   MySQL Ya desde CERO. El tutorial está pensado para que pueda ser desarrollado por una persona que conoce muy poco de programación. El objetivo de este sitio es poder aprender MySQL en forma sencilla viendo un concepto teórico, luego algunos ejercicios resueltos y por último y lo 
+	</p>
+
+	<p id="segundo">MySQL Ya desde CERO. El tutorial está pensado para que pueda ser desarrollado por una persona que conoce muy poco de programación. El objetivo de este sitio es poder aprender MySQL en forma sencilla viendo un concepto teórico, luego algunos ejercicios resueltos y por último y lo 
+	</p>
+
+	<p>
+	MySQL Ya desde CERO. El tutorial está pensado para que puedae ser desarrollado por una persona que conoce muy poco de programación. El objetivo de este sitio es poder aprender MySQL en forma sencilla viendo un concepto teórico, luego algunos ejercicios resueltos y por último y lo 
+	</p>
+
+
+	<script>
+
+	var elementoP = document.getElementsByTagName('p');
+
+	var segundoP = document.getElementById('segundo')
+
+//pasos CReando nodos en Dom 
+// Crear elemento
+var elemento = document.createElement("h2");
+
+// crear un nodo de texto
+var contenido = document.createTextNode("Esto es lo que estoy agregando");
+
+//añadir el nodo de texto al elemento
+elemento.appendChild(contenido);
+
+//agregar atributos al elemento
+elemento.setAttribute("align", "center");
+
+//agregar el elementio al documento tmb  si se le pone body iria al final
+document.getElementById("subtitulo").appendChild(elemento);
+// otra forma document.body.appendChild(elemento);
+
+
+	</script>
+</body>
+</html>

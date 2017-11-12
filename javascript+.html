@@ -1,0 +1,125 @@
+
+<script>
+
+toUpperCase() sirve para convertir una cadena en mayúsculas 
+
+split() permite cortar una cadena usando otra cadena como separadora  "En este caso, una cadena vacía cortará la cadena en caracteres"
+
+
+// ARRAY 
+Los array tienen una propiedad llamada length, que devuelve el número de elementos  console.log("array o variable".length);
+
+También tienen métodos, como join(), el cual une todos los elementos usando una cadena como separador  console.log("array o variable".join('/'));
+Los arrays tienen dos métodos muy importantes: pop y push 
+
+pop() quita un elemento del array y lo retorna console.log("array o variable".pop());
+
+push() agrega un elemento al array y retorna el nuevo tamaño del array console.log("array o variable".push(1989));
+
+indexOf(parametro) Busca en el array el primer elemento que sea igual al parámetro que se le pasa y devuelve su índice
+
+reverse() modifica el arreglo invirtiendo sus elementos y retorna el arreglo invertido console.log("nombre del array o variable".reverse());
+
+concat() crea una copia del array, agrega elementos a esa copia y la retorna console.log(dateParts.concat(9, 30));
+
+
+
+slice(indiceInicial, indiceFinal) crea una copia del array según los parámetros que reciba
+
+el primer parámetro es el índice del elemento en el que inicia la copia
+el segundo parámetro es el índice siguiente (índice + 1) al índice final de la copia.
+El segundo parámetro es opcional, y si se obvia, la copia se realizará desde el índice inicial (0) hasta el final del array original.
+Esta función devuelve la copia del array y deja el array original intacto.
+var array = [8, 20, 12, 9, 1];
+console.log(array.slice(2, 4));
+//[12, 9]
+
+splice(indiceInicial, numeroElementos) modifica el array original, de acuerdo a los parámetros que recibe:
+
+* El primer parámetro es el índice del elemento donde se empezará a cortar
+* El segundo parámetro es el número de elementos que se cortarán del array original, incluyendo el elemento inicial.
+Puede recibir uno o más parámetros opcionales, los cuales se insertan en el índice definido en el primer parámetro.
+Esta función modifica el array original y lo retorna.
+
+
+//OBJETOS
+var dish = {
+  name: 'Ceviche simple',
+  ingredients: [
+    '1 kilo de pescado',
+    '2 cebollas',
+    '1 taza de jugo de limón',
+    '1 ají limo',
+    'sal'
+  ],
+  acompañamiento: [
+    'lechuga (2 hojas por plato)',
+    'maíz cancha',
+    '4 porciones de yuca',
+    '4 choclos sancochados',
+    'camote sancochado en rodajas (2 por plato)'
+  ],
+
+  diners: 4
+};
+Existen dos formas para asignar y acceder al valor de una propiedad en un objeto
+
+Con punto (.) 
+
+console.log(dish.name);
+// "Ceviche simple"
+
+dish.name = 'Ceviche simple (estilo trujillano)';
+
+console.log(dish.name);
+// "Ceviche simple (estilo trujillano)"
+
+<br>
+
+Con corchetes ([ y ]) 
+
+console.log(dish['name']);
+// "Ceviche simple (estilo trujillano)"
+
+dish['name'] = 'Ceviche simple';
+
+console.log(dish['name']);
+// "Ceviche simple"
+
+Usando corchetes tenemos una ventaja importante con respecto a usar punto, debido a que el nombre de la propiedad es una cadena, por lo que podemos utilizar una variable cuyo valor sea definido dinámicamente
+
+
+var dinersPropertyName = 'name';
+
+console.log(dish[dinersPropertyName]);
+// "Ceviche simple"
+
+dish[dinersPropertyName] = 'Ceviche simple (estilo trujillano)';
+
+console.log(dish[dinersPropertyName]);
+// "Ceviche simple (estilo trujillano)"
+
+
+// switch
+var obj = '20';
+
+switch(obj) {
+  case '20':
+    'obj es una cadena';
+    break;
+  case 20:
+    'obj es un número';
+    break;
+  default:
+    'obj tiene otro tipo de dato';
+}
+	"obj es una cadena"
+
+
+
+
+
+
+
+</script>
+

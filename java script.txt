@@ -1,0 +1,544 @@
+se les llama atraves de un <script src="intro.js">
+<script>
+alert (
+	"alerta"
+)
+ funciona con variables tambien
+<script>
+
+Variables 
+para agregar variable se pone con 
+var nombre="cristian";
+
+se puede utilizar las varibles solo llamando
+
+prompt ("texto", "valor"); caja para pedir datos 
+
+se comenta aSI //
+
+++ para mostrar datos++
+document.write(nombre);acepta variables tmb
+console.log(nombre);
+
+para concatenar se utiliza el signo mas +
+
+se puede aser operaciones en la misma variable
+
+Tipos de Datos
+
+*numerico (var edad = 19 entero ---- 33.3232 decimal)
+tambien se puede poner en "22"
+
+*string ( var nombre = "cristian") se puede agregar
+ comillas tmb de esta forma \"rey\" o de esta forma '\e\';
+
+*array - arreglo (para almacenar varios elementos)
+var amigos = ["juan", "pepe", "luis"] tmb van numeros y 
+boleanos se llaman asi document.write(amigos[2]) se llaman
+con los numeros y empiezan desde 0 
+
+*object - objeto (var objeto = { color: "red", size: 12 }) para plugins
+
+*boolean - boleano
+var boleano = false ;
+
+*undefined - indefinido
+var lavadero;
+
+*null
+var numero3 = 10; para poder eliminar
+var numero3 = null;
+
+*NaN
+var texto2 = "hola bebe?"
+
+Arreglos y propiedades
+
+ARRAY
+conjunto de elementos para almacenar en un solo lugar
+funciona asi amigos.length para contar cuantos tienes
+propiedad length()
+ejecutar document.write(amigos.length)
+
+se agregan al array principal pero se pone con push
+tambien se puede utilizar amigos.push("gloria", "hugo")
+
+para eliminar el ultimo se utiliza amigos.pop();
+
+para juntar array se crea otro extra y se pone de esta forma
+
+amigos = ["angel", "rene", "diana"]
+amigos2 = ["angel", "rene", "diana"]
+amigos3 = amigos.concat(amigos2);
+document.write(amigos3);
+
+tmb se utiliza join para poner una forma de separado
+ejemplo amigos.join("--")
+se ejecuta con asi
+document.write(amigos.join (","))
+
+para ordenar alfabeticamente se utiliza un .sort();
+
+Condicionales***
+ se puede agregar variables seguidas ejemplo
+var nombre = "cris", edad = 22;
+ se utiliza == para saber si es igual
+tmb se puede poner asi === pero hay verifica el valor 
+de tipo de dato
+
+se pone asi para  != distinto 
+>= mayor que 
+
+operadores logicos 
+&& y
+|| or una  o la   otra ejecutata
+
+Ciclo For**
+estructura que nos permite repetir nustro codigo muchas
+veces 
+ 
+en el parentesis van las variables
+mientras que la segunda opcion
+los ++ sirven para aumentar
+for(i = 0; i <= 100 ; i++){}
+
+tmb se utiliza las variables
+
+se pueden utizar un length para cntar y usar por numero cadenas de  
+texto
+
+DOM (Document Object Model)***
+escructura de nuestro sitio web que se llaman nodos 
+acceder al dom
+
+se llama de esta forma 
+document.getElementsBytageName()sirve para 
+traer todos los elementos en un arreglo
+sirve para leer nuestra variable o  metodo
+
+cuando usas las consola puedes poner 
+innerHTML para entrar a todo el contenido
+HTML y modificarlo temporalmente.
+ 
+para trabajar con java script se trabaja con 
+ID
+
+C II ****
+al aplastar un boton un ususario puede comentar
+y aser que se grabe en tu WEB pero temporal y si
+quieres que se grabe tienes que ser en un BD
+
+//pasos CReando nodos en Dom 
+// Crear elemento
+var elemento = document.createElement("h2");
+
+// crear un nodo de texto
+var contenido = document.createTextNode("Esto es lo que estoy agregando");
+
+//añadir el nodo de texto al elemento
+elemento.appendChild(contenido);
+
+//agregar atributos al elemento
+elemento.setAttribute("align", "center");
+
+//agregar el elementio al documento tmb  si se le pone body iria al final
+document.getElementById("subtitulo").appendChild(elemento);
+// otra forma document.body.appendChild(elemento);
+
+
+C III****
+parenNode para el elemento padre
+
+<script>
+var elemento = document.createElement("li"),
+	contenido = document.createTextNode(
+	"Hola me llamo Cristian");
+elemento.appendChild(contenido);
+
+
+//var padre = document.getElementById("lista");
+
+//estanos agregando nuestro nuevo elelemnto al final de la lista solo llamando atraves de ID mb sepuede llamar usando  el [parentNode] que es una sintaxis con la cuasl se le llamaria como un arreglo
+var padre = document.getElementsByTagName("li")[0].
+	parentNode,
+	//aqui se esta agregando otra variable seguida en la cual se va ulizilar al ultimo pero el cual se pocicionara primero
+	hijo = document.getElementsByTagName("li")[0];
+
+padre.insertBefore(elemento, hijo);
+
+
+//document.body.appendChild(elemento)
+</script>
+
+C IV****
+Modificando, Remplazando y 
+Eliminando Nodos del DOM
+<script>
+
+//var primerElemento = document.getElementById('primero');
+//con innerHTML se puede modifcar todo un contenido de la web
+
+//primerElemento.innerHTML = "HOLA MUNDO <i>bienvenido</i>";
+
+//tmb existe textContent que  se ejecuta directamente al contenido que quieres utilizar
+
+//primerElemento.textContent = "HOLA MUNDO <i>bienvenido</i>";
+
+var elemento = document.createElement("li"),contenido = document.createTextNode("nuevo texto");
+
+elemento.appendChild(contenido);
+
+
+//aqui se esta creando y eliminando ala vez
+var padre = document.getElementsByTagName("li")[0].parentNode,
+referencia = document.getElementsByTagName("li")[0];
+//para remover o eliminado
+padre.removeChild(referencia);
+
+//aqui se esta creando y eliminando ala vez todo se hace con replaceChild
+//padre.replaceChild(elemento, referencia);
+
+Acceso a los atributos del DOM****
+<section id="contenedor">
+		<div class=""></div>
+		<div class=""></div>
+	</section>
+
+	<script>
+	var elemento = document.createElement("div");
+	var padre = document.getElementById("contenedor");
+	var referencia = document.getElementsByTagName("div")[0];
+	//para poder cambiar se utiliza este setAttribute
+	elemento.setAttribute("class","rojo");
+	padre.insertBefore(elemento, referencia);
+	
+	// para llamar document.body.appendChild(elemento);
+
+	//para cambiar el nombre de los Id se utiliza elemento. Id y para las clases se utlizaelemento.className
+
+
+	</script>
+
+
+Modificando el estilo de los elementos***+
+	<script>
+	var encabezado = document.getElementById("encabezado");
+	encabezado.style.background = "green";
+//con java script se puede aser trabajar las funciones de Csss solo llamando la variable y poniendo style. y el valor que quieres asser
+
+//para cambiar o poner nombre se ase utilizando el nombre de tu variable y poniendo el atributo ejemplo encabezado.className="titulo titulogrande" se puede poner varias en la misma linea de codigo
+	</script>
+
+
+Practica ************
+para accdeder ala fuciones es setattribute("class","thumb grande") tmb
+con className = "thumb grande"
+
+para que se vuelcva pequena se tiene que acer una condicional
+
+este codigo es para que tu imagen se vuelva mas grande
+y ala vez tmb se puede volver chico solo con apretar el boon
+
+<style>
+	.thumb{
+		width: 200px;
+		transition :500ms all ease;
+	}
+
+	.gato{
+		width: 200px;
+		transition :500ms all ease;
+	}
+
+	.grande{
+		width: 400px;
+	}
+
+	.grande2{
+		width: 400px;
+	}
+	</style>
+</head>
+<body>
+
+	<form action="">
+
+		<input type="button" value="cambio de tamaño" onclick="perro(); ">
+	</form>
+
+	<img id="thumb" class="thumb" src="imagenes/dog.jpg" width="400" alt="">
+
+	<img id="gato" class="gato" src="imagenes/cat.jpg" width="400" alt="">
+
+
+	<script>
+	var zoom = function(){
+		var thumb = document.getElementById("thumb");
+
+		if (thumb.className == "thumb" ) {
+			thumb.className = "thumb grande";
+		}else{
+			thumb.className = "thumb";
+		}
+
+		//thumb.setAttribute("class", "thumb grande");
+	};
+	
+	var perro = function(){
+		var gato = document.getElementById("gato");
+
+		if (gato.className == "gato") {
+			gato.className = "gato grande2";
+
+		}else{
+			gato.className = "grande2";
+		}
+
+	};
+
+	</script>
+
+Eventos del DOM*****
+los eventos son acciones que el ususario hace cuando se ejecuata algo
+
+modelo de eventos basico
+modelo de eventos estandar: el mas nuevo
+modelo de eventos explore
+
+boton.addEventListener("","") 
+tenemos 2 eventos
+el tipo 
+el lisener puede ir el nombre de una funcion
+para utilizar tmb se utiliza console.log(funciono :d)
+
+http://www.w3schools.com/jsref/dom_obj_event.asp
+
+Formularios*****
+etiqueta html required es ´para que valide si los datos se llenamron
+
+document.forms
+
+
+document.forms[0]
+
+document.forms[0].elements
+
+
+document.forms[0].elements[0]
+
+document.formulario.nombre para saber mas rapido 
+
+<form action="" name="formulario" method="get">
+
+		<input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:">
+		<br>
+
+		<input type="radio" name="sexo" id="hombre" value="hombre"> hombre
+		<input type="radio" name="sexo" id="mujer" value="mujer"> mujer
+		<br>
+ <!--esta estiqueta es para pedir que todos los campioes esten llenos required-->
+		<input type="checkbox" name="terminos" id="terminos"> terminos y condiciones
+		<br>
+
+		<input type="submit" id="btn" name="btn"  value="enviar" >
+
+	</form>
+
+	<script>
+
+	(function(){
+
+		var formulario = document.getElementsByName('formulario')[0],
+		elementos = formulario.elements ,
+		boton = document.getElementById('btn');
+
+
+
+		var validarNombre = function(e){
+			if (formulario.nombre.value == 0) {
+				alert('completa los datos');
+				e.preventDefault();
+			}
+		};
+
+		var validarRadio = function(e){
+			if (formulario.sexo[0].checked == true  || formulario.sexo[1].checked == true) {
+			
+			}else{
+				alert("completa el sexo")
+				e.preventDefault();
+			}
+		};
+
+		var validarCkeckbox = function(e){
+			if (formulario.terminos.checked == false) {
+				alert("acepta las condiciones")
+				e.preventDefault();
+			}
+		}
+
+		var validar = function(e){
+			validarNombre(e);
+			validarRadio(e);
+			validarCkeckbox(e);
+		};
+
+		formulario.addEventListener("submit", validar);
+
+	}())
+
+
+	</script>
+
+tmb esta validando los formularios y enviando msj de aletas al nio estar llenos
+los campos
+
+Timers, Timeout e Interval 
+para los tiempos 
+Timeout : permite ejecutar una funcion  mientras el tiempo
+que le ayamos especificado se acaba.
+
+se ase con pero esta recibe dos parametros 
+uno el nombre de la funcion y el tiempo que queremos que pase para que realize
+la funcion
+setTimeout()
+
+Interval : nos permite ejecutar codigo cada
+ derterminado tiempo podemos ejecutar cuantas 
+veces querramos pues esta se ejecuta solitamente +
+pues ya esta codeado 
+
+	<script>
+
+	(function(){
+
+		var contador = 0 ;
+
+		//timeout
+		var saludo = function(){
+			// es para llamar ala funcion yq eu cuentenormalmente console.log('ola amigo pepe');
+			contador++;
+			console.log(contador)
+			//aqui funciona contando los numeros
+			
+			setTimeout(saludo, 1000);
+			//tmb puede eejecuata cosas como el interval
+
+			
+			//if (contador === 5) { clearInterval(interval); };
+
+		};
+
+		saludo();
+		
+	
+
+		//interval
+			//var interval = setInterval(saludo, 1000);
+	}())
+
+	</script>
+
+Trabajando con Fechas y Tiempo (Objeto Date)****
+
+	<script>
+
+	(function(){
+
+		var fecha = new Date();
+		document.write(fecha)
+		//para ver la hora del sistema
+
+		console.log(fecha.getHours() -12 );
+		console.log(fecha.getMinutes());
+		console.log(fecha.getSeconds());
+		//este se ve en la consola
+
+		console.log(fecha.getDay());
+		console.log(fecha.getDate());//se ve como un arreglo que pero el domingo es 0
+		console.log(fecha.getMonth());//tmb se ve como un arreglo
+		console.log(fecha.getFullYear());
+
+
+
+	}())
+
+	</script>
+App Lista de Tareas con JS*****
+
+(function(){
+
+//variables
+
+	var lista 	  = document.getElementById("lista"),
+	tareaInput 	  = document.getElementById("tareaInput"),
+	btnNuevaTarea = document.getElementById("btn-agregar");
+
+	//Funciones
+
+	var agregarTarea = function(){
+		var tarea 		= tareaInput. value;
+			nuevaTarea 	= document.createElement("li"),
+			enlace 	= document.createElement("a"), 
+			//utiliza los nuevos enlaces
+			contenido	= document.createTextNode(tarea); 
+			//se agrega la tarea
+		
+		if (tarea === "") {
+			tareaInput.setAttribute("placehoder", " agregar una tarea valida ");
+			tareaInput.className = "error";
+			return false;
+		};
+
+		//agregamos contenido al enlace
+		enlace.appendChild(contenido);
+		//le establecemos un atributo href 
+		enlace.setAttribute("href", "#");
+		//agregamos el enlace (a) ala nueva tarea  (li)
+		nuevaTarea.appendChild(enlace);
+		//agregamos nueva tarea ala lista
+		lista.appendChild(nuevaTarea);
+		//con esto estamos validando datos
+
+		tareaInput.value = "";
+		//con esto se esta eliminado encanto de texto
+
+		//este for sirve para que despues de agregar la tarea siga apareciendo el msj
+		for (var i = 0; i <= lista.children.length -1; i++) {
+		lista.children[i].addEventListener("click", function(){
+			this.parentNode.removeChild(this);
+		});
+	};
+
+
+};
+
+	var comprobarInput = function(){
+		tareaInput.className = "";
+		tareaInput.setAttribute("placehoder", "agrega tu tarea");
+	};
+
+	var eliminarTarea = function(){
+		this.parentNode.removeChild(this);
+		//estamos eliminando pero primero ingresamos a ul que es el padre despues 
+		//nos vamos a li y si funciona
+	};
+
+	//Eventos
+
+	//agrega las tarea
+	btnNuevaTarea.addEventListener("click", agregarTarea);
+
+	//comprobar el input
+
+	tareaInput.addEventListener("click", comprobarInput);
+
+	//borrando elementos de la lista
+	for (var i = 0; i <= lista.children.length -1; i++) {
+		lista.children[i].addEventListener("click", eliminarTarea);
+	};
+
+	//lista.children.length sirve para contar dinamicamentes
+
+}());
+

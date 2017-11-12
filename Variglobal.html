@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+
+//var global = "esta es global";
+
+//var funcion = function(){
+
+//var variableLocal = "esta es Local";
+//alert(variableLocal);
+
+//var funcionLocal = function(){
+
+//var variableLocal = "es variableLocal esta modificado";
+	//alert(variableLocal);}
+
+//funcionLocal();}
+
+//funcion();
+
+//se deve guardar de esta forma para proteger nuestro codigo se llama funcion autoinvocada 
+
+(function(){
+
+	var global = "esta es global";
+
+var funcion = function(){
+
+var variableLocal = "esta es Local";
+alert(variableLocal);
+
+var funcionLocal = function(){
+var variableLocal = "es variableLocal esta modificado";
+	//alert(variableLocal);}
+
+funcionLocal();
+}
+}
+
+
+funcion();
+}() )
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

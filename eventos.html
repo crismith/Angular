@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+<head>
+		<meta charset="UTF-8">
+	<title>Eventos del DOM</title>
+
+</head>
+<body>
+	<!-- <button id="boton">boton</button> -->
+	<a id="boton" href="http://www.facebook.com">facebook</a>
+	<input type="text" id="input">
+
+	<script >
+
+	//funcion auto invocada asi se llama esta forma es mas segura al guardar codigo
+
+		(function(){
+
+		var saludo = function(e){
+			console.log('sii siii');
+			e.preventDefault();
+			//para prevenir que el enlace nos lleve asia la pagina y nos envia un msj 
+		};
+
+		//var input = document.getElementById('input');
+		//input.addEventListener("click", saludo);
+
+		var boton = document.getElementById('boton');
+		boton.addEventListener("click", saludo);
+
+		//boton.addEventListener("click", saludo2);
+		//se pone sin parentesis
+
+	}())
+
+
+	</script>
+
+</body>
+</html>
